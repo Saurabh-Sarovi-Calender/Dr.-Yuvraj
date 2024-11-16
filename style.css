@@ -1,0 +1,250 @@
+@import url('https://fonts.cdnfonts.com/css/akshar-unicode');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Akshar Unicode', sans-serif;
+}
+
+body {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100% !important; 
+    background-color: #f8f8f8;
+    overflow-x: hidden;
+}
+
+.container {
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #1d3f97;
+    font-size: 2.2em;
+}
+
+h1 {
+    color: #ff0000;
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+.button-instruction {
+    background-color: #3b2a83;
+    color: #fff;
+    padding: 10px;
+    border-radius: 30px;
+    margin: 15px 0;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+.instruction-text {
+    color: #333;
+    font-size: 2em;
+    margin: 15px 0;
+}
+
+.instruction-text b {
+    color: #000;
+}
+
+.share-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3em;
+    cursor: pointer;
+    margin: 15px 0;
+}
+
+.share-button:hover {
+    background-color: #218838;
+}
+
+.yellow-banner {
+    background-color: #ffeb3b;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 2em;
+}
+
+.yellow-banner p {
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.yellow-banner b {
+    color: #000;
+}
+
+
+/* =========================== */
+
+/* Basic Styles */
+/* Base Styles */
+.table-container {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #eee;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.number-cell {
+    background-color: #ff5722;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+.candidate-cell {
+    font-size: 1.8em;
+    color: #000;
+}
+
+.symbol-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.candidate-image, .symbol-image {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.button-cell {
+    background-color: #f3e5f5;
+}
+
+.vote-button {
+    background-color: #3f51b5;
+    color: #fff;
+    padding: 10px 10px;
+    height: 30px;
+    width: 80px;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.9em;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+.vote-button:hover {
+    background-color: #303f9f;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal background */
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+.modal-content {
+    width: 80%;
+    height: auto;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1em;
+    animation: fadeIn 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.animation {
+    font-size: 1em;
+    margin-top: 10px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Extra Compact Styles for Mobile */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.6em; /* Smaller font size */
+    }
+
+    th, td {
+        padding: 2px; /* Minimal padding */
+    }
+
+    .vote-button {
+        padding: 10px 5px;
+        font-size: 0.5em; /* Smaller button text */
+    }
+
+    .candidate-image, .symbol-image {
+        width: 25px; /* Shrink image size on mobile */
+        height: 25px;
+    }
+
+    .modal-content {
+        width: 100%;
+        height: auto;
+        scale: 1;
+        font-size: 0.8em; 
+    }
+
+    .modal{
+        width: 100vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
